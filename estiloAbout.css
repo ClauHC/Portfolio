@@ -1,0 +1,31 @@
+#about {
+    padding-top: 0;
+}
+
+#personal_photo img{
+    width: 100%;
+}
+
+#titular_me {
+    text-align: left;
+    margin-left: 70%;
+}
+
+#about_me {
+    margin-top: -98px;
+}
+
+#read_cv {
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/CV_2024_1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#leter_A {
+    margin: 0 -4% 0 -12%;
+}

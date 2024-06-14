@@ -1,0 +1,62 @@
+
+/* ------------------------------------------------- */
+
+#specialty {
+    padding: 0 100px 60px 100px;
+  }
+  
+  #specialty h2 {
+    font-size: 110px;
+    color: #060405;
+    font-weight: 400;
+    margin-bottom: -32px;
+    letter-spacing: 14px;
+  }
+  
+  #specialty :first-child{
+    font-size: 364px;
+    color: #CF1325;
+    font-family: "Allura", cursive;
+    text-align: center;
+    margin-top: -8px;
+    margin-left: -58px;
+  }
+  
+  #specialty :nth-child(2) {
+    margin-top: -468px;
+  }
+  
+  #specialty :nth-child(4), #specialty :last-child {
+    text-align: right;
+  }
+
+/* ------------------------------------------------- */
+
+#inicio p {
+    text-align: center;
+}
+
+/* ------------------------------------------------- */
+
+.circle {
+    fill: #cf1325;
+    stroke-width: 0px;
+}
+
+#inicio svg {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    
+}
+
+#scrollText :last-child {
+  margin-top: -34px;
+}
+
+#scrollText {
+  width: 256px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------- */

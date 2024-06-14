@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #EAEAEA;
+  font-family: "EB Garamond", serif;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #060405;
+  font-size: 22px;
+}
+
+h2 {
+  color: #060405;
+}
+
+h3 {
+  color: #060405;
+  line-height: 52px;
+  font-size: 50px;
+}
+
+a {
+  color: #060405;
+  text-decoration: none;
+}
+
+.red_word {
+  color: #CF1325;
+}
+
+.white_word {
+  color: white;
+}
+
+.all_caps {
+  text-transform: uppercase;
+}
+
+.capitular {
+  color: #CF1325;
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-size: 90px;
+}
+
+
+/* ------------------------------------ SECTION'S TITLE ----------------------------------- */
+
+
+.titular {
+  width: 700px;
+  height: 150px;
+  /* background-color: gray; */
+}
+
+.titular :first-child {
+  font-weight:500;
+  letter-spacing: 8px;
+  font-size: 140px;
+}
+
+.titular :last-child {
+  color: #CF1325;
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  margin-top: -37%;
+  font-size: 170px;
+  text-align: right;
+  margin-left: 70%;
+}
+
+.to_left {
+  margin-left: 3%;
+}
+
+.to_right {
+  margin-left: 40%;
+}
+
+
+/* ----------------------------------- SECTION'S SPACE ---------------------------------- */
+
+
+section {
+  padding: 100px 0;
+}
+
+
+/* ---------------------------------- SEE MORE BUTTON --------------------------------- */
+
+
+.container_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.load-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-family: "EB Garamond", serif;
+  text-align: center;
+  margin: 20px;
+  padding: 15px 32px;
+  display: inline-block;
+}
+
+/* ------------------------------ BACKGROUN AQUAREL IMAGE ----------------------------- */
+
+.aquarel {
+  background-image: url('/img/fondo_acuarela.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 50px;
+  background-size:cover;
+}
+
+/* ------------------------------------  ----------------------------------- */
+
