@@ -27,6 +27,10 @@ h3 {
   font-size: 50px;
 }
 
+h4 {
+  font-size:22px;
+}
+
 a {
   color: #060405;
   text-decoration: none;
@@ -64,17 +68,17 @@ a {
 .titular :first-child {
   font-weight:500;
   letter-spacing: 8px;
-  font-size: 140px;
+  font-size: 110px;
 }
 
 .titular :last-child {
   color: #CF1325;
   font-family: "Allura", cursive;
   font-weight: 400;
-  margin-top: -37%;
-  font-size: 170px;
+  margin-top: -30%;
+  font-size: 140px;
   text-align: right;
-  margin-left: 70%;
+  margin-left: 56%;
 }
 
 .to_left {
@@ -82,7 +86,7 @@ a {
 }
 
 .to_right {
-  margin-left: 40%;
+  margin-left: 48%;
 }
 
 
@@ -90,7 +94,7 @@ a {
 
 
 section {
-  padding: 100px 0;
+  padding: 90px 0;
 }
 
 
@@ -106,7 +110,7 @@ section {
 }
 
 .load-button {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   border: none;
   color: white;
   font-size: 20px;
@@ -115,16 +119,17 @@ section {
   margin: 20px;
   padding: 15px 32px;
   display: inline-block;
+  cursor: pointer;
 }
 
-/* ------------------------------ BACKGROUN AQUAREL IMAGE ----------------------------- */
+/* ------------------------------ BACKGROUN AQUAREL ----------------------------- */
 
 .aquarel {
-  background-image: url('/img/fondo_acuarela.png');
+  background-image: url('/Portfolio/svg/fondo_acuarela.svg');
   background-repeat: no-repeat;
   background-position: bottom;
   padding-bottom: 50px;
-  background-size:cover;
+  background-size:contain;
 }
 
 /* ------------------------------------  ----------------------------------- */

@@ -1,34 +1,51 @@
 
 /* ------------------------------------------------- */
 
-#specialty {
-    padding: 0 100px 60px 100px;
-  }
+#inicio {
+  padding-top: 70px;
+}
   
-  #specialty h2 {
-    font-size: 110px;
-    color: #060405;
+#gridSpecialty {
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: auto 500px auto;
+  grid-template-rows: 471.5px;
+    /* background-color: grey; */
+  }  
+
+  #gridSpecialty h2 {
+    font-size: 120px;
     font-weight: 400;
-    margin-bottom: -32px;
-    letter-spacing: 14px;
   }
-  
-  #specialty :first-child{
-    font-size: 364px;
-    color: #CF1325;
-    font-family: "Allura", cursive;
-    text-align: center;
-    margin-top: -8px;
-    margin-left: -58px;
+
+  #graphic {
+    align-content: end;
+    padding-left: 7%;
+    background-color: black;
   }
-  
-  #specialty :nth-child(2) {
-    margin-top: -468px;
+
+  #graphic h2 {
+    color: white;
   }
-  
-  #specialty :nth-child(4), #specialty :last-child {
+
+  #front {
     text-align: right;
+    padding-right: 7%;
+    /* background-color: blue; */
   }
+  
+
+  #manosAmpersand {
+    background-image: url('/Portfolio/img/manos_ampersand.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+    width: auto;
+    height: auto;
+  }
+  
+  
 
 /* ------------------------------------------------- */
 
