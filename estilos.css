@@ -1,43 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px; /*voy a usar em así que me aseguro que el puntaje base sea el que quiero*/
+}
+
+/* ------ Paleta de colores ------- */
+:root {
+  --deep-primary: #682A3B;
+  --dark-primary: #942343;
+  --primary: #BD0D3F;
+  --soft-primary: #F27F7F;
+  --light-primary: #EEE6E2;
+  --light-primary-rgb: 238, 230, 226;
+
+  --text-primary: #151414;
+  --text-primary-rgb: 21, 20, 20;
+  --text-secondary: #7E7C77;
+  --text-suport: #B1AEAA;
 }
 
 body {
-  background-color: #EAEAEA;
-  font-family: "EB Garamond", serif;
+  background-color: var(--light-primary);
+  font-family: var(--text-primary);
 }
 
 p {
-  margin-bottom: 20px;
-  color: #060405;
-  font-size: 22px;
+  margin-bottom: 1.25rem;
+  font-size: 1.38rem;
+}
+
+h1 {
+  font-weight:400;
+  letter-spacing: 0.1rem;
+  font-size: 6.88rem;
 }
 
 h2 {
-  color: #060405;
+  color: var(--primary);
+  font-family: "Allura", cursive;
+  font-weight: 400;
+  font-size: 8.75rem;
+  text-align: right;
+  margin-top: -3.5%;
+  margin-left: -10%; 
+  white-space: nowrap;
 }
 
 h3 {
-  color: #060405;
-  line-height: 52px;
-  font-size: 50px;
+  line-height: 3.25rem;
+  font-size: 3.13rem;
+  font-weight:600;
+}
+
+h4 {
+  font-size:1.38rem;
+  font-weight:600;
+  color: var(--primary);
 }
 
 a {
-  color: #060405;
+  color: var(--text-primary);
   text-decoration: none;
-}
-
-.red_word {
-  color: #CF1325;
-}
-
-.white_word {
-  color: white;
 }
 
 .all_caps {
@@ -45,54 +73,29 @@ a {
 }
 
 .capitular {
-  color: #CF1325;
+  color: var(--primary);
   font-family: "Allura", cursive;
   font-weight: 400;
-  font-size: 90px;
+  font-size: 5.63rem;
 }
 
 
 /* ------------------------------------ SECTION'S TITLE ----------------------------------- */
 
-
 .titular {
-  width: 700px;
-  height: 150px;
+  display: flex;
   /* background-color: gray; */
-}
-
-.titular :first-child {
-  font-weight:500;
-  letter-spacing: 8px;
-  font-size: 140px;
-}
-
-.titular :last-child {
-  color: #CF1325;
-  font-family: "Allura", cursive;
-  font-weight: 400;
-  margin-top: -37%;
-  font-size: 170px;
-  text-align: right;
-  margin-left: 70%;
 }
 
 .to_left {
   margin-left: 3%;
 }
 
-.to_right {
-  margin-left: 40%;
-}
-
-
 /* ----------------------------------- SECTION'S SPACE ---------------------------------- */
 
-
 section {
-  padding: 100px 0;
+  padding: 5.63rem 0;
 }
-
 
 /* ---------------------------------- SEE MORE BUTTON --------------------------------- */
 
@@ -105,26 +108,16 @@ section {
   height: 100%;
 }
 
-.load-button {
-  background-color: rgba(0, 0, 0, 0);
+.load_button {
+  background-color: transparent;
   border: none;
-  color: white;
-  font-size: 20px;
-  font-family: "EB Garamond", serif;
+  color: var(--text-secondary);
+  font-size: 1.25rem;
   text-align: center;
-  margin: 20px;
-  padding: 15px 32px;
+  margin: 1.25rem;
+  padding: 0.94rem 2.00rem;
   display: inline-block;
-}
-
-/* ------------------------------ BACKGROUN AQUAREL IMAGE ----------------------------- */
-
-.aquarel {
-  background-image: url('/img/fondo_acuarela.png');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  padding-bottom: 50px;
-  background-size:cover;
+  cursor: pointer;
 }
 
 /* ------------------------------------  ----------------------------------- */

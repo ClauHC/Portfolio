@@ -2,30 +2,29 @@
     padding-top: 0;
 }
 
-#personal_photo img{
+.grid_container h3{
+    margin-bottom: 2rem;
+}
+
+#about img{
     width: 100%;
 }
 
-#titular_me {
-    text-align: left;
-    margin-left: 70%;
+#about .titular{
+    margin-top: -102px;
+    flex-direction: row-reverse;
+    margin-right: 3%;
 }
 
-#about_me {
-    margin-top: -98px;
+#about .titular h1{
+    font-size: 140px;
+    margin-right: 100px;
 }
 
-#read_cv {
-    width: 100%;
-    height: 100%;
-    background-image: url('/img/CV_2024_1.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
+#about .titular h2{
+    margin-right: -10px;
 }
 
-#leter_A {
-    margin: 0 -4% 0 -12%;
+#noColumnP p{
+    column-count: auto;
 }

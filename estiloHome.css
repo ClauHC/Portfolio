@@ -1,62 +1,191 @@
 
-/* ------------------------------------------------- */
-
-#specialty {
-    padding: 0 100px 60px 100px;
-  }
-  
-  #specialty h2 {
-    font-size: 110px;
-    color: #060405;
-    font-weight: 400;
-    margin-bottom: -32px;
-    letter-spacing: 14px;
-  }
-  
-  #specialty :first-child{
-    font-size: 364px;
-    color: #CF1325;
-    font-family: "Allura", cursive;
-    text-align: center;
-    margin-top: -8px;
-    margin-left: -58px;
-  }
-  
-  #specialty :nth-child(2) {
-    margin-top: -468px;
-  }
-  
-  #specialty :nth-child(4), #specialty :last-child {
-    text-align: right;
-  }
-
-/* ------------------------------------------------- */
+#inicio {
+  padding-top: 4.38rem;
+}
 
 #inicio p {
-    text-align: center;
+  white-space: nowrap;
 }
 
-/* ------------------------------------------------- */
+/* ------------------------ TOP HOVER MANOS-AMPERSAND ------------------------- */
 
-.circle {
-    fill: #cf1325;
-    stroke-width: 0px;
+/* General ------------------------ */
+  
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4.38rem;
+}
+  
+.container_ampersand {
+  display: flex;
+  width: 100%;
+  height: 66.67%; /* 2/3 de pantalla */
+  overflow: hidden;
+  position: relative;
 }
 
-#inicio svg {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    
+.zone {
+  transition: flex 0.5s ease, transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
-#scrollText :last-child {
-  margin-top: -34px;
+.content :nth-child(2) {
+  font-size: 6.00rem;
+  font-weight: 400;
+  margin-top: -2.63rem;
+}
+
+.content :nth-child(3) {
+  margin-bottom: 0.19rem;
+}
+
+/* Left ------------------------ */
+
+.left, .right {
+  flex: 1;
+  transition: flex 0.5s ease;
+}
+
+.left {
+  background-color: black;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-left: 1.25rem;
+}
+
+.left .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: opacity 0.5s ease;
+}
+
+.left .left_extra {
+  display: none;
+  color: white;
+}
+
+.left_title {
+  color: white;
+  font-size: 6rem;
+}
+
+/* Center ------------------------ */
+
+.center {
+  /* background-color: lightblue; */
+  width: 30%; /* Tamaño fijo para la zona central */
+  justify-content: center;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Right ------------------------ */
+
+.right {
+  /* background-color: lightgreen; */
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-right: 1.25rem;
+}
+
+.right .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: opacity 0.5s ease;
+}
+
+.right .right_extra {
+  display: none;
+}
+
+.right_title {
+  font-size: 6rem;
+  letter-spacing: -0.13rem;
+}
+
+/* Hover ------------------------ */
+
+.zone:hover {
+  cursor: pointer;
+}
+
+.hover_left .left {
+  flex: 3;
+  align-items: center;
+}
+
+.hover_left .right {
+  flex: 0;
+}
+
+.hover_left .left .left_extra {
+  display: block;
+  opacity: 1;
+}
+
+.hover_left .right_title {
+  opacity: 0;
+}
+
+.hover_right .right {
+  flex: 3;
+  align-items: center;
+}
+
+.hover_right .left {
+  flex: 0;
+}
+
+.hover_right .right .right_extra {
+  display: block;
+  opacity: 1;
+}
+
+.hover_right .left_title {
+  opacity: 0;
+}
+  
+
+/* ------------------------- FIN del TOP HOVER MANOS-AMPERSAND ------------------------ */
+
+#inicio :nth-child(2) {
+  text-align: center;
 }
 
 #scrollText {
-  width: 256px;
+  width: 16.00rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+}
+
+#scrollText button {
+  border-style: none;
+  background-color: transparent;
+  background-image: url(/svg/flecha_abajo.svg);
+  background-size: contain;
+  width: 3rem; 
+  height: 3rem;
+}
+
+#scrollText button:hover {
+  background-image: url(/svg/flecha_abajo_hover.svg);
 }
 
 /* ------------------------------------------------- */

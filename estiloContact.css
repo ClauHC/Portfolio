@@ -1,20 +1,23 @@
 #contact {
-    background-color: #060405;
+    background-color: var(--text-primary);
 }
 
-#contact_text {
-    font-size: 98px;
-    display: flex;
-    margin-top: -94px;
+#contact h1 {
+    color: white;
+}
+
+#contact h2 {
+    font-size: 6.13rem;
+    margin-top: 3.25rem;
 }
 
 #postcard {
-    margin-top: 150px;
+    margin-top: 9.38rem;
 }
 
 #postcard_img {
-    width: 900px;
-    height: 500px;
+    width: 56.25rem; /* 900px */
+    height: 31.25rem; /* 500px */
     background-image: url('/img/294.jpg');
     background-repeat: repeat;
     background-size: contain;
@@ -23,11 +26,11 @@
 }
 
 #postcard_white {
-    width: 900px;
-    height: 500px;
+    width: 56.25rem; /* 900px */
+    height: 31.25rem; /* 500px */
     background-color: white;
     margin: 0 auto;
-    margin-top: -530px;
+    margin-top: -33.13rem; /* -530px */
     display: flex;
     overflow: hidden;
 }
@@ -36,24 +39,27 @@
 
 .left_half, .right_half {
     flex: 1;
-    margin: 30px;
+    margin: 1.88rem; /* 30px */
 }
 
 .left_half {
-    border-right: 1px solid #060405;
-    padding-right: 30px;
+    border-right: 1px solid var(--text-primary);
+    padding-right: 1.88rem; /* 30px */
     margin-right: 0;
 }
 
 .form_group {
     display: flex;
     align-items:start;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #060405;
+    margin-bottom: 1.25rem; /* 20px */
+    border-bottom: 1px solid var(--text-primary);
+}
+form :nth-child(4) {
+    border-bottom: none;
 }
 
 .form_group label {
-    flex: 0 0 150px; /* Ajusta el ancho según sea necesario */
+    flex: 0 0 74px; /* Ajusta el ancho según sea necesario */
     padding: 10px 0;
 }
 
@@ -70,21 +76,80 @@
     /* background-color: #CF1325; */
 }
 
-/* ---------------------------------- SEND BUTTON --------------------------------- */
-
-button {
-    
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    background-color: #CF1325;
-    color: white;
-    font-family: "EB Garamond", serif;
-    font-weight: 600;
-    cursor: pointer;
+textarea {
+    resize: none;
+    font-size: 18px;
+    /* background-color: lightsalmon; */
+    height: 176px;
 }
 
-button:hover {
-    background-color: #820e19;
+input {
+    font-size: 18px;
+}
+
+/*fuerza el fondo blanco en lugar del color de autofill por defecto (amarillo azul etc)*/
+input:autofill,
+input:autofill:hover,
+input:autofill:focus {
+    box-shadow: 0 0 0px 1000px white inset;
+    color: var(--text-primary);
+    transition: background-color 5000s ease-in-out 0s; /* Evita parpadeo del autofill */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    color: var(--text-primary);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--text-suport);
+}
+
+/* ---------------------------------- SEND BUTTON --------------------------------- */
+
+form :last-child {
+    display: flex;
+    justify-content: right;
+}
+
+form :last-child button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 90px;
+    cursor: pointer;
+
+    /* text */
+    text-align: left;
+    color: white;
+    font-weight: 600;
+
+    /* background */
+    background-image: url('/svg/avion_envio.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 36px;
+    background-color: var(--soft-primary);
+    
+    /* border */
+    border-image: url('/svg/borde_boton.svg');
+    border-image-slice: 9;
+    border-image-width: 3.5px ;
+    border-image-outset: 3px;
+    border-image-repeat: round;
+
+}
+
+form :last-child button:hover {
+    background-color: var(--dark-primary);
+
+    /* border */
+    border-image: url('/svg/borde_boton_hover.svg');
+    border-image-slice: 9;
+    border-image-width: 3.5px ;
+    border-image-outset: 3px;
+    border-image-repeat: round;
 }
 
