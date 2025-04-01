@@ -19,6 +19,19 @@ CONTAINER.addEventListener('mouseleave', () => {
     CONTAINER.classList.remove('hover_right');
 });
 
+//función para ocultar imagen rota y aplicar un degradado
+function handleAmpersandError(img) {
+    // Oculta la imagen rota
+    img.style.display = 'none';
+
+    // Aplica un degradado al contenedor de la imagen
+    const parent = img.parentElement;
+    parent.style.background = 'linear-gradient(90deg, black, transparent)'; // Cambia los colores según tu diseño
+    parent.style.backgroundSize = 'cover'; // Asegura que el degradado ocupe todo el espacio
+    parent.style.backgroundPosition = 'center';
+    parent.style.transition = 'transform 0.3s ease'; // Sincroniza la transición con el hover
+}
+
 // -------------------- SCROLL TO PROYECTS ------------------------
 
 const SCROLL_BUTTON = document.getElementById('scrollDown');
@@ -33,6 +46,40 @@ function goToProjects() {
 }
 
 // -------------------- LOAD MORE JSON ------------------------
+
+//Función para manejar errores de carga de imágenes
+function handleImageError(img) {
+    // Oculta la imagen rota
+    img.style.display = 'none';
+
+    // Aplica un fondo de color al contenedor de la imagen
+    const parent = img.parentElement;
+    parent.style.backgroundColor = 'var(--soft-primary)';
+    parent.style.display = 'flex';
+    parent.style.alignItems = 'center';
+    parent.style.justifyContent = 'center';
+    parent.style.height = '100%'; // Asegura que ocupe todo el espacio del contenedor
+
+    // Asegura de que el texto Descúbrelo permanezca en su lugar
+    const discoverText = parent.querySelector('span');
+    discoverText.style.position = 'absolute';
+    discoverText.style.bottom = '2rem';
+    discoverText.style.left = '50%';
+    discoverText.style.transform = 'translateX(-50%)';
+    discoverText.style.zIndex = '2';
+
+    // Agrega un nuevo elemento para Imagen no disponible
+    const errorText = document.createElement('span');
+    errorText.textContent = 'Imagen no disponible';
+    errorText.style.fontSize = '0.8rem'; // Tamaño más pequeño
+    errorText.style.color = 'var(--text-suport)';
+    errorText.style.zIndex = '3'; // Asegura de que esté por encima del fondo
+    errorText.style.textAlign = 'center';
+    errorText.style.position = 'absolute';
+    errorText.style.top = '50%';
+    errorText.style.left = '50%';
+    parent.appendChild(errorText);
+}
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -56,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="image_column">
                                 <a href="${project.link}">
                                     <div class="image_overlay">
-                                        <img src="${project.imagen}" alt="${project.nombre}">
+                                        <img src="${project.imagen}" alt="${project.nombre}" onerror="handleImageError(this)">
                                         <span>Descúbrelo</span>
                                     </div>
                                 </a>
@@ -78,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="image_column">
                                 <a href="${project.link}">
                                     <div class="image_overlay">
-                                        <img src="${project.imagen}" alt="${project.nombre}">
+                                        <img src="${project.imagen}" alt="${project.nombre}" onerror="handleImageError(this)">
                                         <span>Descúbrelo</span>
                                     </div>
                                 </a>
@@ -96,6 +143,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
     }
+    
+
+    
 
     // Función para cargar más proyectos
     function loadMoreProjects() {
@@ -126,6 +176,17 @@ document.addEventListener('DOMContentLoaded', function() {
     LOAD_BUTTON.addEventListener('click', loadMoreProjects);
 
 });
+//----------------------- Imagen no disponible About --------------------
+
+function handlePersonalPhotoError(img) {
+    // Oculta la imagen rota
+    img.style.display = 'none';
+
+    // Aplica un degradado al contenedor de la imagen
+    const parent = img.parentElement;
+    parent.style.backgroundColor = 'var(--soft-primary)'; 
+    parent.style.minHeight = '300px'; 
+}
 
 // -------------------- Validación del teléfono ------------------------
 document.querySelector('form').addEventListener('submit', function(e) {

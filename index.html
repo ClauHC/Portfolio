@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <div class="zone center">
-                        <img src="/img/manos_ampersand.png" alt="Imagen Central">
+                        <img src="/img/manos_ampersand.png" alt="Imagen Central" onerror="handleAmpersandError(this)">
                     </div>
                     <div class="zone right">
                         <div class="content">
@@ -110,10 +110,10 @@
 
         <!-- ----------------------------- ABOUT ------------------------------ -->
 
-        <section id="about" class="aquarel">
+        <section id="about">
 
             <div id="personal_photo">
-                <img src="/img/photo_personal.png" alt="Foto personal"/>
+                <img src="/img/photo_personal.png" alt="Foto personal" onerror="handlePersonalPhotoError(this)"/>
             </div>
 
             <div class="titular" >
@@ -213,7 +213,9 @@
                 <a href="https://github.com/ClauHC" target="_blank"><img src="/svg/icono_github.svg"></a>
             </div>
 
-            <p>Claudia H. Colomer | Diseñadora gráfica | Desarrolladora Front-End</p>
+            <div>
+                <p>Claudia H. Colomer | <span>Desarrolladora Front-End</span> | Diseñadora gráfica | <span>Marketing manager</span></p>
+            </div>
         </footer>
 
         <script src="scripts.js"></script>

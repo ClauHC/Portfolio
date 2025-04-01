@@ -5,12 +5,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-primary);
   font-size: 16px; /*voy a usar em así que me aseguro que el puntaje base sea el que quiero*/
 }
 
-/* ------ Paleta de colores ------- */
+
 :root {
+  /* ------ Paleta de colores ------- */
   --deep-primary: #682A3B;
   --dark-primary: #942343;
   --primary: #BD0D3F;
@@ -22,11 +23,16 @@
   --text-primary-rgb: 21, 20, 20;
   --text-secondary: #7E7C77;
   --text-suport: #B1AEAA;
+
+  /* ------ Fuentes tipográficas ------- */
+  --font-primary: "Montserrat", sans-serif; 
+  --font-secondary: "Allura", cursive;
 }
 
 body {
   background-color: var(--light-primary);
-  font-family: var(--text-primary);
+  font-family: var(--font-primary);
+  color: var(--text-primary)
 }
 
 p {
@@ -42,7 +48,7 @@ h1 {
 
 h2 {
   color: var(--primary);
-  font-family: "Allura", cursive;
+  font-family: var(--font-secondary);
   font-weight: 400;
   font-size: 8.75rem;
   text-align: right;
@@ -74,7 +80,7 @@ a {
 
 .capitular {
   color: var(--primary);
-  font-family: "Allura", cursive;
+  font-family: var(--font-secondary);
   font-weight: 400;
   font-size: 5.63rem;
 }

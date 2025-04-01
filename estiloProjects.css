@@ -23,14 +23,21 @@
         position: relative;
         display: inline-block;
         overflow: hidden;
-        width: 100%; /* Asegura que el contenedor tenga el mismo tamaño que la imagen */
+        width: 100%; 
         height: auto;
+        min-height: 400px;
     }
 
     .image_overlay {
         position: relative;
-        display: inline-block;
+        width: 100%;
+        min-height: 400px; /* tamaño minimo */
+        background-color: transparent; /* por defecto, sin fondo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
+        transition: transform 0.3s ease; /* Sincroniza la transición con el hover */
     }
     
     .image_overlay img {
@@ -67,8 +74,8 @@
 
     /* Hover: sincroniza la transformación de la imagen, el overlay y el texto*/
     .image_column:hover img,
-    .image_column:hover .image_overlay::before,
-    .image_column:hover .image_overlay span {
+    .image_column:hover .image_overlay span,
+    .image_column:hover .image_overlay::before {
     transform: scale(0.95); /* Escala uniforme para la imagen, overlay y texto */
     }
 
