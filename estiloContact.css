@@ -1,5 +1,6 @@
 #contact {
     background-color: var(--text-primary);
+    
 }
 
 #contact h1 {
@@ -50,11 +51,12 @@
 
 .form_group {
     display: flex;
-    align-items:start;
+    align-items: start;
     margin-bottom: 1.25rem; /* 20px */
     border-bottom: 1px solid var(--text-primary);
 }
-form :nth-child(4) {
+
+form :nth-child(5) {
     border-bottom: none;
 }
 
@@ -78,13 +80,8 @@ form :nth-child(4) {
 
 textarea {
     resize: none;
-    font-size: 18px;
     /* background-color: lightsalmon; */
-    height: 176px;
-}
-
-input {
-    font-size: 18px;
+    height: 123px;
 }
 
 /*fuerza el fondo blanco en lugar del color de autofill por defecto (amarillo azul etc)*/
@@ -108,48 +105,64 @@ input::placeholder, textarea::placeholder {
     color: var(--text-suport);
 }
 
+/* -------------------- Desplegable ----------------------*/
+.form_group select {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    background-color: white;
+}
+
+.form_group select:focus {
+    outline: none;    
+}
+
+/* 
+Esto me ha tocado los coj* (-_-)
+los estilos de option:hover no funcionan en la mayoría de los navegadores, 
+ya que el menú desplegable del <select> es controlado por el sistema operativo y no por CSS
+*/
+
 /* ---------------------------------- SEND BUTTON --------------------------------- */
 
 form :last-child {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
+
 }
 
-form :last-child button {
-    margin-top: 20px;
+form button {
     padding: 10px;
-    width: 90px;
+    align-items: center; /* Alinea verticalmente el texto e imagen */
     cursor: pointer;
-
-    /* text */
-    text-align: left;
-    color: white;
-    font-weight: 600;
-
-    /* background */
-    background-image: url('/svg/avion_envio.svg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 36px;
     background-color: var(--soft-primary);
+
+    /* text */;
+    color: white;
+    font-weight: 600;  
     
     /* border */
     border-image: url('/svg/borde_boton.svg');
     border-image-slice: 9;
     border-image-width: 3.5px ;
-    border-image-outset: 3px;
+    border-image-outset: 3.3px;
     border-image-repeat: round;
 
 }
 
-form :last-child button:hover {
+form button:hover {
     background-color: var(--dark-primary);
 
     /* border */
     border-image: url('/svg/borde_boton_hover.svg');
     border-image-slice: 9;
     border-image-width: 3.5px ;
-    border-image-outset: 3px;
+    border-image-outset: 3.3px;
     border-image-repeat: round;
 }
 
+form button img {
+    width: 30px;
+    height: 30px;    
+    margin-left: 8px; /* Agrega espacio entre el texto y la imagen */
+}

@@ -124,7 +124,7 @@
             <div class="grid_container">
 
                 <div class="text_column position_column_2" id="noColumnP">
-                    <h3>EN BREVES PALBRAS</h3>
+                    <h3>EN BREVES PALABRAS</h3>
                     <p>Hola, mi nombre es Claudia y soy una Diseñadora de Comunicación Visual senior con diez años de experiencia en el sector del Diseño gráfico, Marketing y Dirección de Arte.</p>
                     <p>He viajado por varios países para conocer distintas culturas y ver sus formas de trabajo, con lo que he logrado aprender nuevos idiomas y he desarrollado mis habilidades de comunicación e integración en diversos entornos.</p>
                     <p>En mi carrera profesional he trabajado en agencias de publicidad, estudios de diseño, empresas de marketing y comunicación, y en el sector editorial. He tenido la oportunidad de trabajar con clientes de diferentes sectores y tamaños, lo que me ha permitido desarrollar una visión global y estratégica de la comunicación visual y el marketing.</p>        
@@ -174,7 +174,16 @@
 
                             <div class="form_group">
                                 <label for="phone">TELÉFONO</label>
-                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
+                                <input type="tel" id="phone" name="phone" placeholder="666331688"required>
+                            </div>
+
+                            <div class="form_group">
+                                <label for="type">ERES</label>
+                                <select id="type" name="type" required>
+                                    <option value="" disabled selected>Selecciona...</option>
+                                    <option value="particular">Particular</option>
+                                    <option value="empresa">Empresa</option>
+                                </select>
                             </div>
 
                             <div class="form_group">
@@ -183,7 +192,7 @@
                             </div>
 
                             <div>
-                                <button type="submit">ENVIAR</button>
+                                <button type="submit">ENVIAR<img src="/svg/avion_envio.svg"></button>
                             </div>
 
                         </form>
@@ -199,10 +208,12 @@
 
         <footer>
             <div class="social-icons">
-                <a href="https://www.behance.net/clau-h-colomer" target="_blank">Behance</a>
-                <a href="https://www.linkedin.com/in/claudia-h-colomer/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/ClauHC" target="_blank">GitHub</a>
+                <a href="https://www.behance.net/clau-h-colomer" target="_blank"><img src="/svg/icono_behance.svg"></a>
+                <a href="https://www.linkedin.com/in/claudia-h-colomer/" target="_blank"><img src="/svg/icono_linkedin.svg"></a>
+                <a href="https://github.com/ClauHC" target="_blank"><img src="/svg/icono_github.svg"></a>
             </div>
+
+            <p>Claudia H. Colomer | Diseñadora gráfica | Desarrolladora Front-End</p>
         </footer>
 
         <script src="scripts.js"></script>

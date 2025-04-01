@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a href="${project.link}">
                                     <div class="image_overlay">
                                         <img src="${project.imagen}" alt="${project.nombre}">
-                                        Descúbrelo
+                                        <span>Descúbrelo</span>
                                     </div>
                                 </a>
                             </div>
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <a href="${project.link}">
                                     <div class="image_overlay">
                                         <img src="${project.imagen}" alt="${project.nombre}">
-                                        Descúbrelo
+                                        <span>Descúbrelo</span>
                                     </div>
                                 </a>
                             </div>
@@ -125,6 +125,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     LOAD_BUTTON.addEventListener('click', loadMoreProjects);
 
+});
+
+// -------------------- Validación del teléfono ------------------------
+document.querySelector('form').addEventListener('submit', function(e) {
+    const phoneInput = document.getElementById('phone');
+    const phoneRegex = /^[0-9]{9}$/; // Acepta 9 dígitos sin espacios
+    
+    if (!phoneRegex.test(phoneInput.value)) {
+        e.preventDefault();
+        alert('Por favor, introduce un número de teléfono válido (9 dígitos)');
+        phoneInput.focus();
+    }
 });
 
 
