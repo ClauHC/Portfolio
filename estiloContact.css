@@ -1,6 +1,5 @@
 #contact {
-    background-color: var(--text-primary);
-    
+    background-color: var(--text-primary);    
 }
 
 #contact h1 {
@@ -8,30 +7,38 @@
 }
 
 #contact h2 {
-    font-size: 6.13rem;
-    margin-top: 3.25rem;
+    margin-top: 2.5rem;
+    margin-left: -20%;
 }
 
 #postcard {
     margin-top: 9.38rem;
 }
 
-#postcard_img {
+#postcard_img,
+#postcard_img div,
+#postcard_white{
     width: 56.25rem; /* 900px */
     height: 31.25rem; /* 500px */
+}
+
+#postcard_img,
+#postcard_white{
+    margin: 0 auto;
+}
+
+#postcard_img div{
     background-image: url('/img/294.jpg');
     background-color: var(--soft-primary);
     background-repeat: repeat;
     background-size: contain;
-    margin: 0 auto;
-    margin-left: 18%;
+    margin-left: -2rem;
 }
 
 #postcard_white {
     width: 56.25rem; /* 900px */
     height: 31.25rem; /* 500px */
     background-color: white;
-    margin: 0 auto;
     margin-top: -33.13rem; /* -530px */
     display: flex;
     overflow: hidden;
@@ -86,14 +93,6 @@ textarea {
 }
 
 /*fuerza el fondo blanco en lugar del color de autofill por defecto (amarillo azul etc)*/
-input:autofill,
-input:autofill:hover,
-input:autofill:focus {
-    box-shadow: 0 0 0px 1000px white inset;
-    color: var(--text-primary);
-    transition: background-color 5000s ease-in-out 0s; /* Evita parpadeo del autofill */
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus {
@@ -145,8 +144,8 @@ form button {
     /* border */
     border-image: url('/svg/borde_boton.svg');
     border-image-slice: 9;
-    border-image-width: 3.5px ;
-    border-image-outset: 3.3px;
+    border-image-width: 3.5px;
+    border-image-outset: 3px;
     border-image-repeat: round;
 
 }
@@ -158,7 +157,7 @@ form button:hover {
     border-image: url('/svg/borde_boton_hover.svg');
     border-image-slice: 9;
     border-image-width: 3.5px ;
-    border-image-outset: 3.3px;
+    border-image-outset: 3px;
     border-image-repeat: round;
 }
 
@@ -166,4 +165,72 @@ form button img {
     width: 30px;
     height: 30px;    
     margin-left: 8px; /* Agrega espacio entre el texto y la imagen */
+}
+
+/* ------------------------------------ RESPONSIVE ----------------------------------- */
+
+/* Responsive: Ajustes para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+
+    #contact .titular h2 {
+        margin-top: 1.5rem;
+        margin-left: -30%;
+    }
+
+    #postcard_img,
+    #postcard_img div,
+    #postcard_white {
+        width: 40rem;
+        
+    }
+}
+
+/* Responsive: Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    #postcard_img,
+    #postcard_img div,
+    #postcard_white{
+        width: 30.25rem; /* 500px */
+        height:  55.5rem; /* 900px */
+    }
+
+    #postcard {
+        margin-top: 5rem; 
+    }
+    
+    #postcard_white {
+        flex-direction: column; /* Cambia a disposición vertical */
+        margin-top: -54rem; 
+    }
+
+    .left_half {
+        order: 1; /* Asegura que la izquierda esté arriba */
+        text-align: center; /* Centra el texto */
+        border-right: none;
+        border-bottom: 2px solid var(--soft-primary);
+        padding: 0;
+        margin: 4.5rem 1.88rem 2rem 1.88rem; /* 30px */
+    }
+
+    .right_half {
+        order: 2; /* Asegura que la derecha esté abajo */
+
+    }
+
+    #postcard p {
+        margin-bottom: 0;
+    }
+
+    #contact .titular
+    {
+        display: block;
+    }
+
+    #contact .titular h2 {
+        margin-top: -5%;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    
 }

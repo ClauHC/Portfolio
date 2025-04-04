@@ -21,22 +21,13 @@
     /* Ajusta el contenedor para que el overlay y la imagen se comporten correctamente */
     .image_overlay {
         position: relative;
-        display: inline-block;
-        overflow: hidden;
-        width: 100%; 
-        height: auto;
-        min-height: 400px;
-    }
-
-    .image_overlay {
-        position: relative;
-        width: 100%;
-        min-height: 400px; /* tamaño minimo */
-        background-color: transparent; /* por defecto, sin fondo */
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        width: 100%;
+        min-height: 270px; /* tamaño minimo */
+        background-color: transparent; /* por defecto, sin fondo */
         transition: transform 0.3s ease; /* Sincroniza la transición con el hover */
     }
     
@@ -45,6 +36,8 @@
         width: 100%;
         height: auto;
         transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave */
+        object-fit:cover;
+        object-position: center; /* la imagen sobresale por los lados si no alcanza la altura mínima */
     }
     
     .image_overlay::before {
@@ -130,4 +123,50 @@
     color: var(--text-secondary);
     font-weight: 400;
     font-size: 24px;
+}
+
+/* ------------------------------------ RESPONSIVE ----------------------------------- */
+
+/* Responsive: Ajustes para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .grid_container {
+        grid-template-columns: repeat(4, 1fr); /* Cambia a 4 columnas */
+        column-gap: 4%; /* Aumenta el espacio entre columnas */
+    }
+
+    .image_column, .text_column {
+        grid-column: span 2; /* Imagen y texto ocupa 2 columnas */
+    }
+
+    .text_column p{
+        column-count: auto; /* Sin columnas en el texto */
+    }
+}
+
+/* Responsive: Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .grid_container {
+        grid-template-columns: 1fr; /* Una sola columna */
+        column-gap: 0; /* Sin espacio entre columnas */
+        row-gap: 20px; /* Espaciado entre filas */
+        margin: 0 16px; /* Márgenes laterales para el contenido */
+    }
+
+    .image_column {
+        grid-column: span 1; /* Imagen ocupa toda la columna */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+
+    .text_column {
+        grid-column: span 1; /* Texto ocupa toda la columna */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+
+    .text_column p{
+        column-count: auto; /* Sin columnas en el texto */
+    }
+
+    .position_column_2 {
+        grid-column: 1; /* Ocupa toda la columna */
+    }
 }
