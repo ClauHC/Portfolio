@@ -34,7 +34,7 @@
 // }
 
 
-/* ------- Mantiene PC y TABLET y cambia en MOVIL ------- */
+/* ------- TOP HOVER MANOS-AMPERSAND Mantiene PC y TABLET, cambia en MOVIL ------- */
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const leftZone = document.querySelector('.left');
     const rightZone = document.querySelector('.right');
 
-    function handleMobileView(e) {
+    function handleAmpersandView(e) {
         if (e.matches) {
             // Cambios para móviles
             container.style.display = 'inline-block';
@@ -121,10 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Escuchar cambios en la media query
-    mediaQuery.addEventListener('change', handleMobileView);
+    mediaQuery.addEventListener('change', handleAmpersandView);
 
     // Ejecutar la función inicial según el tamaño de la pantalla
-    handleMobileView(mediaQuery);
+    handleAmpersandView(mediaQuery);
 });
 
 
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="image_column">
                             <a href="${project.link}">
                                 <div class="image_overlay">
-                                    <img src="${project.imagen}" alt="${project.nombre}" onerror="handleImageError(this)">
+                                    <img src="${project.imagen}" alt="${project.nombre}" onerror="handleProjectImageError(this)">
                                     <span>Descúbrelo</span>
                                 </div>
                             </a>
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="image_column">
                                 <a href="${project.link}">
                                     <div class="image_overlay">
-                                        <img src="${project.imagen}" alt="${project.nombre}" onerror="handleImageError(this)">
+                                        <img src="${project.imagen}" alt="${project.nombre}" onerror="handleProjectImageError(this)"">
                                         <span>Descúbrelo</span>
                                     </div>
                                 </a>
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="image_column">
                                 <a href="${project.link}">
                                     <div class="image_overlay">
-                                        <img src="${project.imagen}" alt="${project.nombre}" onerror="handleImageError(this)">
+                                        <img src="${project.imagen}" alt="${project.nombre}" onerror="handleProjectImageError(this)"">
                                         <span>Descúbrelo</span>
                                     </div>
                                 </a>
@@ -308,6 +308,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ejecutar la función inicial según el tamaño de la pantalla
     handleMediaQueryChange(mediaQuery);
 });
+
+//--------------------- Imagen no disponible Proyectos ------------------
+
+function handleProjectImageError(img) {
+    // Oculta la imagen rota
+    img.style.display = 'none';
+
+    // Crea un contenedor para el mensaje de error
+    const errorContainer = document.createElement('div');
+    errorContainer.style.backgroundColor = 'var(--soft-primary)'; 
+    errorContainer.style.color = 'var(--light-primary)'; 
+    errorContainer.style.display = 'flex'; 
+    errorContainer.style.justifyContent = 'center'; //  horizontalmente
+    errorContainer.style.alignItems = 'center'; // verticalmente
+    errorContainer.style.fontSize = '0.8rem'; 
+    errorContainer.style.textAlign = 'center'; 
+    errorContainer.style.width = '100%';
+    errorContainer.style.minHeight = '16.88rem'; // misma altura mínima del contenedor
+    errorContainer.textContent = 'Imagen no disponible'; 
+    errorContainer.style.transition = 'transform 0.3s ease'; 
+
+    // Inserta el contenedor de error en el lugar de la imagen
+    img.parentNode.insertBefore(errorContainer, img);
+}
 
 //----------------------- Imagen no disponible About --------------------
 

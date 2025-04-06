@@ -13,13 +13,15 @@
 
 /* ---------------------------------- RESPONSIVE ---------------------------------- */
 
+
+
 /* ---------- TABLET Y PC ---------- */
 @media (min-width: 769px){
 
     #about .titular{
         display: grid;
         grid-template-columns: repeat(2, 50%);
-        margin: -7% 0 7% 0;
+        margin: -5% 0 7% 0;
     }
     
     #about .titular h1{
@@ -35,8 +37,8 @@
     }
     
     #about .titular h2 {
-        margin-top: -32%;
         margin-right: 3.5rem;
+        margin-top: -23%;
     }
     
 }

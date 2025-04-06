@@ -20,13 +20,19 @@
     .image_overlay {
         position: relative;
         overflow: hidden;
+        width: 100%;
+        min-height: 16.88rem;         
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .image_overlay img {
         display: block;
         width: 100%;
         height: auto;
-        transition: none; /* Sin transición por defecto */
+        object-fit:cover;
+        object-position: center; /* la imagen sobresale por los lados si no alcanza la altura mínima */
     }
     
     .image_overlay span {
@@ -154,32 +160,15 @@
 
     /* ------------------------------ img -------------------------------*/
 
-    
-
-    /* Ajusta el contenedor para que el overlay y la imagen se comporten correctamente */
     .image_overlay {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        width: 100%;
-        min-height: 270px; 
-        background-color: transparent; /* por defecto, sin fondo */
         transition: transform 0.3s ease; /* sincroniza la transición con el hover */
     }
     
     .image_overlay img {
-        display: block;
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease, filter 0.3s ease; 
-        object-fit:cover;
-        object-position: center; /* la imagen sobresale por los lados si no alcanza la altura mínima */
+        transition: transform 0.3s ease, filter 0.3s ease;         
     }
     
-    .image_overlay::before {
-        
+    .image_overlay::before {        
         transition: transform 0.3s ease; /* sincroniza la transición con la imagen */
     }
     

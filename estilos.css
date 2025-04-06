@@ -29,15 +29,15 @@
   --font-primary: "Montserrat", sans-serif; 
   --font-secondary: "Allura", cursive;
 
-  /* ------ Tamaños de fuentes ------- */
-  --font-size-titular-inicio: clamp(2.5rem, 5vw, 6rem); /* Mínimo 3rem (48px), máximo 6rem (96px), 5vw: Tamaño preferido basado en el ancho del viewport (5% del ancho de la pantalla) */
-  --font-size-p: clamp(1rem, 2vw , 1.25rem ); /* Mínimo 1rem (16px), máximo 1.25rem (20px) */
-  --font-size-li: clamp(1rem, 2vw, 1.25rem); /* Mínimo 1rem (16px), máximo 1.25rem (20px) */
-  --font-size-h1: clamp(2.5rem, 10vw, 6.75rem); /* Mínimo 3rem (48px), máximo 6.88rem (110px) */
-  --font-size-h2: clamp(2.5rem, 10vw, 8rem); /* Mínimo 5rem (80px), máximo 8.75rem (140px) */
-  --font-size-h3: clamp(1.5rem, 2.25vw, 3.25rem); /* Mínimo 1.25rem (20px), máximo 3.13rem (50px) */
-  --font-size-h4: clamp(1rem, 2vw, 1.38rem) ; /* Mínimo 1rem (16px), máximo 1.38rem (22px) */
-  --font-size-buttons: clamp(1rem, 2vw, 1.25rem); /* Mínimo 1rem (16px), máximo 1.25rem (20px) */
+  /* ------ Tamaños de fuentes ------- */ /* --- clamp(<min>, <ideal>, <max>) --- */
+  --font-size-titular-inicio: clamp(2.5rem, 5vw, 6rem); /* min 3rem (48px), max 6rem (96px), 5vw: viewport (5% del ancho de la pantalla) */
+  --font-size-p: clamp(1rem, 2vw , 1.25rem ); /* min 1rem (16px), max 1.25rem (20px) */
+  --font-size-li: clamp(1rem, 2vw, 1.25rem); /* min 1rem (16px), max 1.25rem (20px) */
+  --font-size-h1: clamp(2.5rem, 10vw, 6.75rem); /* min 3rem (48px), max 6.88rem (110px) */
+  --font-size-h2: clamp(2.5rem, 10vw, 8rem); /* min 5rem (80px), max 8.75rem (140px) */
+  --font-size-h3: clamp(1.5rem, 2.25vw, 3.25rem); /* min 1.25rem (20px), max 3.13rem (50px) */
+  --font-size-h4: clamp(1rem, 2vw, 1.38rem) ; /* min 1rem (16px), max 1.38rem (22px) */
+  --font-size-buttons: clamp(1rem, 2vw, 1.25rem); /* min 1rem (16px), max 1.25rem (20px) */
   
   /* ------ Pesos de fuentes ------- */
 }
