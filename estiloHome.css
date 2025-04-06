@@ -1,161 +1,12 @@
 
 #inicio {
-  padding-top: 4.38rem;
+  padding-top: 0;  
+  margin-top: clamp(2.5rem, 5vw, 4rem);
 }
 
 #inicio p {
   white-space: nowrap;
 }
-
-/* ------------------------ TOP HOVER MANOS-AMPERSAND ------------------------- */
-
-/* General ------------------------ */
-  
-.container {
-  /*height: 100%;
-  width: 100%;*/
-  display: flex;
-  /*justify-content: center;
-  align-items: center;*/
-  margin-bottom: 4.38rem;
-}
-  
-.container_ampersand {
-  display: flex;
-  /*width: 100%;*/
-  /*height: 66.67%; /* 2/3 de pantalla */
-  overflow: hidden;
-  position: relative;
-}
-
-.zone {
-  transition: flex 0.5s ease, transform 0.5s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.content :nth-child(2) { /*el segundo hijo del contentent es la segunda linea del titular*/
-  font-size: var(--font-size-titular-header);
-  font-weight: 400;
-  margin-top: -2.63rem;
-}
-
-.left, .right {
-  flex: 1;
-  transition: flex 0.5s ease;
-}
-
-/* Left ------------------------ */
-
-.left {
-  background-color: black;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding-left: 1.25rem;
-}
-
-.left .content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: opacity 0.5s ease;
-  color: white;
-}
-
-.left .left_extra {
-  display: none;
-}
-
-.left_title {  
-  font-size: var(--font-size-titular-header);
-}
-
-/* Center ------------------------ */
-
-.center {
-  /* background-color: lightblue; */
-  width: 30%; /* Tamaño fijo para la zona central */
-  /*min-height: 470px; /* Altura mínima para el contenedor */
-  justify-content: center;
-  z-index: 1;
-  transition: transform 0.5s ease;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-/* Right ------------------------ */
-
-.right {
-  /* background-color: lightgreen; */
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding-right: 1.25rem;
-}
-
-.right .content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  transition: opacity 0.5s ease;
-}
-
-.right .right_extra {
-  display: none;
-}
-
-.right_title {
-  font-size: var(--font-size-titular-header);
-  letter-spacing: -0.13rem; /* -2px */
-}
-
-/* Hover ------------------------ */
-
-.zone:hover {
-  cursor: pointer;
-}
-
-.hover_left .left {
-  flex: 3;
-  align-items: center;
-}
-
-.hover_left .right {
-  flex: 0;
-}
-
-.hover_left .left .left_extra {
-  display: block;
-  opacity: 1;
-}
-
-.hover_left .right_title {
-  opacity: 0;
-}
-
-.hover_right .right {
-  flex: 3;
-  align-items: center;
-}
-
-.hover_right .left {
-  flex: 0;
-}
-
-.hover_right .right .right_extra {
-  display: block;
-  opacity: 1;
-}
-
-.hover_right .left_title {
-  opacity: 0;
-}
-/* ------------------------- FIN del TOP HOVER MANOS-AMPERSAND ------------------------ */
 
 #scrollText {
   width: 16.00rem;
@@ -178,21 +29,249 @@ img {
   background-image: url(/svg/flecha_abajo_hover.svg);
 }
 
-#inicio #intro {
+#intro {
   text-align: center;
   white-space: normal;
-  padding: 0 135px;
+  padding: 0 3rem;
 }
-/* ------------------------------- FIN del ESTILO INICIO ------------------------------- */
 
 
 /* ------------------------------------ RESPONSIVE ----------------------------------- */
 
-/* Responsive: Ajustes para pantallas medianas (tablets) */
-@media (max-width: 1024px) {
+/* --------------------- PC Y TABLET -------------------- */
+@media (min-width: 769px) {
+  .center {
+    width: 30%; /* Ancho del centro en PC y tablet */
+  }
+
+  .center img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene las proporciones */
+    object-fit: contain; /* Asegura que la imagen no desborde */
+  }
+
   /* ------------------------ TOP HOVER MANOS-AMPERSAND ------------------------- */
-  
-  
- 
+
+  /* General ------------------------ */
+    
+  .container {
+    /*height: 100%;
+    width: 100%;*/
+    display: flex;
+    /*justify-content: center;
+    align-items: center;*/
+    margin-bottom: 4.38rem;
+  }
+    
+  .container_ampersand {
+    display: flex;
+    /*width: 100%;*/
+    /*height: 66.67%; /* 2/3 de pantalla */
+    overflow: hidden;
+    position: relative;
+  }
+
+  .zone {
+    transition: flex 0.5s ease, transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .content :nth-child(2) { /*el segundo hijo del contentent es la segunda linea del titular*/
+    font-size: var(--font-size-titular-inicio);
+    font-weight: 400;
+    margin-top: clamp(-30px, -2.5vw, -20px); /* min, preferido, max */
+  }
+
+  .left, .right {
+    flex: 1;
+    transition: flex 0.5s ease;
+  }
+
+  /* Left ------------------------ */
+
+  .left {
+    background-color: black;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 1.25rem;
+  }
+
+  .left .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: opacity 0.5s ease;
+    color: white;
+  }
+
+  .left .left_extra {
+    display: none;
+  }
+
+  .left_title {  
+    font-size: var(--font-size-titular-inicio);
+  }
+
+  /* Center ------------------------ */
+
+  .center {
+    width: 30%; /* Tamaño fijo para la zona central */
+    justify-content: center;
+    z-index: 1;
+    transition: transform 0.5s ease;
+  } 
+
+  /* Right ------------------------ */
+
+  .right {
+    /* background-color: lightgreen; */
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 1.25rem;
+    text-align: right;
+  }
+
+  .right .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: opacity 0.5s ease;
+  }
+
+  .right .right_extra {
+    display: none;
+  }
+
+  .right_title {
+    font-size: var(--font-size-titular-inicio);
+    letter-spacing: -0.13rem; /* -2px */
+  }
+
+  /* Hover ------------------------ */
+
+  .zone:hover {
+    cursor: pointer;
+  }
+
+  .hover_left .left {
+    flex: 3;
+    align-items: center;
+  }
+
+  .hover_left .right {
+    flex: 0;
+  }
+
+  .hover_left .left .left_extra {
+    display: block;
+    opacity: 1;
+  }
+
+  .hover_left .right_title {
+    opacity: 0;
+  }
+
+  .hover_right .right {
+    flex: 3;
+    align-items: center;
+  }
+
+  .hover_right .left {
+    flex: 0;
+  }
+
+  .hover_right .right .right_extra {
+    display: block;
+    opacity: 1;
+  }
+
+  .hover_right .left_title {
+    opacity: 0;
+  }
+  /* ------------------------- FIN del TOP HOVER MANOS-AMPERSAND ------------------------ */
+
 }
 
+/*------------------- MOVIL Y TABLET ---------------- */
+@media (max-width: 1024px) {
+
+  /*esto de que se parta el texto no me gusta así que es una solución temporal*/
+  #inicio p {
+    white-space: normal;
+  }
+
+  /*no mee stá cogiendo el minimo así que se lo fuerzo. revisar esto luego y arreglar*/
+  .content :nth-child(2) { /* segunda linea del titular*/
+    margin-top: -30px; /* min*/
+  }
+
+}
+
+/*------------------- MOVIL ---------------- */
+
+@media (max-width: 768px) {
+  #inicio {
+    text-align: center; 
+  }
+
+  .container {
+    background-color: var(--text-primary); 
+    display: block;
+    margin-bottom: 2.5rem;;
+  }
+
+  .container_ampersand {
+    padding: 1rem 0; 
+  }
+
+  .zone {
+    margin: 1rem 0; /* Espaciado entre zonas */
+    margin: 0 auto;
+  }
+
+  .zone .content > *:nth-child(n+3) {
+      display: none; /* Oculta todos los hijos a partir del tercero */
+  }
+
+  .zone p {
+      color: var(--optional-white); /* Los párrafos serán blancos */
+      font-size: clamp(2.5rem, 7vw, 5rem); /* Ajusta el tamaño de fuente al de h1 */
+      margin: 1.5rem 0; /* Espaciado entre párrafos para evitar superposición */
+  }
+
+  .zone.center {
+      width: 45%; /* La imagen ocupa el 45% del ancho */
+  }
+
+  .zone.center img {
+      max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+      height: auto; /* Mantiene las proporciones */
+      object-fit: contain; /* Asegura que la imagen no desborde */
+  }
+
+  /* Elimina animaciones y hover */
+  .zone:hover,
+  .hover_left .left,
+  .hover_right .right {
+      cursor: default; /* Elimina el puntero de hover */
+      flex: none; /* Elimina el comportamiento de flex */
+      transition: none; /* Elimina las transiciones */
+  }
+
+  .hover_left .left,
+  .hover_right .right,
+  .hover_left .right,
+  .hover_right .left {
+      flex: none; /* Desactiva el comportamiento de flex */
+      transition: none; /* Elimina las transiciones */
+  }
+
+  .hover_left .left_extra,
+  .hover_right .right_extra {
+      display: none; /* Oculta los elementos extra */
+  }
+}

@@ -18,6 +18,7 @@
   --soft-primary: #F27F7F;
   --light-primary: #EEE6E2;
   --light-primary-rgb: 238, 230, 226;
+  --optional-white: #FFFFFF;
 
   --text-primary: #151414;
   --text-primary-rgb: 21, 20, 20;
@@ -29,12 +30,12 @@
   --font-secondary: "Allura", cursive;
 
   /* ------ Tamaños de fuentes ------- */
-  --font-size-titular-header: clamp(3rem, 5vw, 6rem); /* Mínimo 3rem (48px), máximo 6rem (96px), 5vw: Tamaño preferido basado en el ancho del viewport (5% del ancho de la pantalla) */
+  --font-size-titular-inicio: clamp(2.5rem, 5vw, 6rem); /* Mínimo 3rem (48px), máximo 6rem (96px), 5vw: Tamaño preferido basado en el ancho del viewport (5% del ancho de la pantalla) */
   --font-size-p: clamp(1rem, 2vw , 1.25rem ); /* Mínimo 1rem (16px), máximo 1.25rem (20px) */
   --font-size-li: clamp(1rem, 2vw, 1.25rem); /* Mínimo 1rem (16px), máximo 1.25rem (20px) */
-  --font-size-h1: clamp(3.2rem, 7.2vw, 6.88rem); /* Mínimo 3rem (48px), máximo 6.88rem (110px) */
-  --font-size-h2: clamp(3.25rem, 8vw, 8.75rem); /* Mínimo 5rem (80px), máximo 8.75rem (140px) */
-  --font-size-h3: clamp(2rem, 2.25vw, 3.25rem); /* Mínimo 1.25rem (20px), máximo 3.13rem (50px) */
+  --font-size-h1: clamp(2.5rem, 10vw, 6.75rem); /* Mínimo 3rem (48px), máximo 6.88rem (110px) */
+  --font-size-h2: clamp(2.5rem, 10vw, 8rem); /* Mínimo 5rem (80px), máximo 8.75rem (140px) */
+  --font-size-h3: clamp(1.5rem, 2.25vw, 3.25rem); /* Mínimo 1.25rem (20px), máximo 3.13rem (50px) */
   --font-size-h4: clamp(1rem, 2vw, 1.38rem) ; /* Mínimo 1rem (16px), máximo 1.38rem (22px) */
   --font-size-buttons: clamp(1rem, 2vw, 1.25rem); /* Mínimo 1rem (16px), máximo 1.25rem (20px) */
   
@@ -119,15 +120,21 @@ section {
 }
 
 .load_button {
-  background-color: transparent;
+  background-color: var(--soft-primary);
   border: none;
-  color: var(--text-secondary);
+  border-radius: 2rem;
+  color: var(--optional-white);
   font-size: var(--font-size-buttons);
   text-align: center;
   margin: 1.25rem;
   padding: 0.94rem 2.00rem;
   display: inline-block;
   cursor: pointer;
+}
+
+.load_button:hover {
+  background-color: var(--dark-primary);
+  color: var(--optional-white);
 }
 
 /* ------------------------------------  ----------------------------------- */

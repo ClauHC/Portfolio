@@ -20,25 +20,51 @@
         
         <header>
 
-            <img id="logo" src="/svg/logo_chc_nombre.svg" alt="CHC"/>
+            <!-- ------------------ IZQUIERDA ------------------- -->
+            
+            <!-- PC -->
+            <nav id="menu_left">
+                <ul>
+                    <li><a href="#inicio">INICIO</a></li>
+                    <li><a href="#graphicProjects">PROYECTOS</a></li>
+                    <!-- <li><a href="#developProjects">DEVELOP</a></li> -->
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </nav>
 
-            <div>
-                <nav id="menu_left">
+            <!-- tablets y móviles -->
+            <button id="menu_hamburger" aria-label="Abrir menú">
+                <img src="/svg/menu_hamburguesa.svg" alt="Menú hamburguesa">
+            </button>
+
+            <div id="fullscreen_menu" >
+                <nav>
                     <ul>
                         <li><a href="#inicio">INICIO</a></li>
                         <li><a href="#graphicProjects">PROYECTOS</a></li>
-                        <!-- <li><a href="#developProjects">DEVELOP</a></li> -->
                         <li><a href="#about">ABOUT</a></li>
                     </ul>
                 </nav>
-
-                <nav id="menu_right">
-                    <ul>
-                        <!-- En un futuro se agregará un cambio de idioma por esto se divide en dos el menú -->
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </nav>
             </div>
+
+            <!-- ------------------ CENTRO ------------------- -->
+            
+            <img id="logo" src="/svg/logo_chc_nombre.svg" alt="CHC"/>
+
+            <!-- ------------------ DERECHA ------------------- -->
+
+            <!-- PC -->
+            <nav id="menu_right">
+                <ul>
+                    <!-- En un futuro se agregará un cambio de idioma por esto se divide en dos el menú -->
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            
+            <!-- tablets y móviles -->
+            <button id="contact_button" aria-label="Ir a contacto">
+                <img src="/svg/contact_postcard.svg" alt="Contacto">
+            </button>     
 
         </header>
 
@@ -56,7 +82,7 @@
                         </div>
                     </div>
                     <div class="zone center">
-                        <img src="/img/manos_ampersand.png" alt="Imagen Central" onerror="handleAmpersandError(this)">
+                        <!-- imagen desde CSS y JS -->
                     </div>
                     <div class="zone right">
                         <div class="content">
@@ -117,8 +143,9 @@
             </div>
 
             <div class="titular" >
-                <h2>mi</h2> <!-- Al usar row reverse se altera el orden-->
                 <h1>SOBRE</h1> 
+                <h2>mi</h2> 
+                
             </div>
 
             <div class="grid_container">
@@ -210,9 +237,9 @@
 
         <footer>
             <div class="social-icons">
-                <a href="https://www.behance.net/clau-h-colomer" target="_blank"><img src="/svg/icono_behance.svg"></a>
-                <a href="https://www.linkedin.com/in/claudia-h-colomer/" target="_blank"><img src="/svg/icono_linkedin.svg"></a>
-                <a href="https://github.com/ClauHC" target="_blank"><img src="/svg/icono_github.svg"></a>
+                <a href="https://www.behance.net/clau-h-colomer" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/claudia-h-colomer/" target="_blank"></a>
+                <a href="https://github.com/ClauHC" target="_blank"></a>
             </div>
 
             <div>

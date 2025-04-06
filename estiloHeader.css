@@ -1,52 +1,120 @@
+/* General header styles */
 header {
-    background: rgba(var(--light-primary-rgb), 0.75);
-    width: 100%;
-    height: 4.00rem;
-    position: fixed;
-    z-index: 100;
-}
-
-header div {
-  display:inline-block;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 100;  
   width: 100%;
-}
-
-nav {
-    /* background-color: red; */
-    margin-top: -5.00rem;
-}
-
-#menu_left {
-    float: left;
-}
-
-#menu_right {
-    float: right;
-}
-
-nav ul {
-  list-style: none;
-  overflow: hidden; 
-}
-
-nav ul li {
-  float: left;
-  font-size: var(--font-size-li);
-  display: block; 
-  padding: 1.25rem;
-}
-
-nav ul li:hover {
-    font-weight:800;
+  height: clamp(2.5rem, 5vw, 4rem); 
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(var(--light-primary-rgb), 0.75);
 }
 
 #logo {
-  margin: 0 35%;
+  padding: 0.15rem 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centra el logo horizontalmente */
+  height: 100%;
 }
 
-header p {
-  float: left;
-  display: block; 
-  padding: 1.25rem;
-  margin: 0 -1.25rem;
+/* --------------------------------------- MENU PC ------------------------------------- */
+
+/* Menú izquierdo y derecho (visibles solo en PC) */
+#menu_left,
+#menu_right {
+  display: flex;
+}
+
+#menu_left ul,
+#menu_right ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+#menu_left ul li a,
+#menu_right ul li a {
+  text-decoration: none;
+  font-size: var(--font-size-li);
+  color: var(--text-primary);
+}
+
+#menu_left ul li a:hover,
+#menu_right ul li a:hover {
+  color: var(--soft-primary);
+}
+
+
+/* --------------------------------------- MENU MOVIL y TABLET ------------------------------------- */
+#menu_hamburger,
+#contact_button {
+  display: none; /* Ocultos por defecto (solo visibles en tablets y móviles) */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#menu_hamburger img,
+#contact_button img {
+  display: block; /* Asegura que las imágenes sean elementos de bloque */
+  margin: auto; /* Centra la imagen dentro del botón */
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+/* Menú de pantalla completa (oculto por defecto) */
+#fullscreen_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); 
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  line-height: 4rem;
+}
+
+#fullscreen_menu.active {
+  display: flex; /* Muestra el menú cuando está activo */
+}
+
+#fullscreen_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#fullscreen_menu ul li {
+  margin: 1rem 0;
+}
+
+#fullscreen_menu ul li a {
+  text-decoration: none;
+  font-size: 2rem; /* Tamaño grande para el texto */
+  color: white;
+}
+
+/* ---------------------------------------- RESPONSIVE ------------------------------------------*/
+
+@media (max-width: 1024px) {
+  #menu_left,
+  #menu_right {
+      display: none; /* Oculta los menús izquierdo y derecho */
+  }
+
+  #menu_hamburger,
+  #contact_button {
+      display: block; /* Muestra el menú hamburguesa y el botón de contacto */
+  }
 }

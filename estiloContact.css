@@ -7,8 +7,9 @@
 }
 
 #contact h2 {
-    margin-top: 2.5rem;
+    margin-top: 5.5%;
     margin-left: -20%;
+    font-size: clamp(1.75rem, 7vw, 7rem);;
 }
 
 #postcard {
@@ -36,8 +37,6 @@
 }
 
 #postcard_white {
-    width: 56.25rem; /* 900px */
-    height: 31.25rem; /* 500px */
     background-color: white;
     margin-top: -33.13rem; /* -530px */
     display: flex;
@@ -47,9 +46,9 @@
 /* ---------------------------------- FORM CONTACT --------------------------------- */
 
 .left_half, .right_half {
-    flex: 1;
-    margin: 1.88rem; /* 30px */
-}
+    flex: 1; /* Cada mitad ocupa la mitad del espacio disponible */
+    margin: 1.88rem;
+} 
 
 .left_half {
     border-right: 1px solid var(--text-primary);
@@ -89,7 +88,7 @@ form :nth-child(5) {
 textarea {
     resize: none;
     /* background-color: lightsalmon; */
-    height: 123px;
+    height: 7.69rem;
 }
 
 /*fuerza el fondo blanco en lugar del color de autofill por defecto (amarillo azul etc)*/
@@ -173,8 +172,8 @@ form button img {
 @media (max-width: 1024px) {
 
     #contact .titular h2 {
-        margin-top: 1.5rem;
-        margin-left: -30%;
+        margin-top: 6%;
+        margin-left: -35%;
     }
 
     #postcard_img,
@@ -190,8 +189,13 @@ form button img {
     #postcard_img,
     #postcard_img div,
     #postcard_white{
-        width: 30.25rem; /* 500px */
-        height:  55.5rem; /* 900px */
+        width: 67vw; 
+        min-height: 110vw;
+    }
+
+    #postcard_white {
+        height:  155vw;
+        height: auto; 
     }
 
     #postcard {
@@ -200,25 +204,28 @@ form button img {
     
     #postcard_white {
         flex-direction: column; /* Cambia a disposición vertical */
-        margin-top: -54rem; 
+        margin-top: -107%; 
     }
+    .left_half, .right_half {
+        flex :none; 
+        margin: 1.88rem;
+    } 
 
     .left_half {
         order: 1; /* Asegura que la izquierda esté arriba */
-        text-align: center; /* Centra el texto */
+        text-align: center; 
         border-right: none;
         border-bottom: 2px solid var(--soft-primary);
         padding: 0;
-        margin: 4.5rem 1.88rem 2rem 1.88rem; /* 30px */
+        margin: 4.5rem 1.88rem 2rem 1.88rem; 
     }
 
     .right_half {
         order: 2; /* Asegura que la derecha esté abajo */
-
     }
 
-    #postcard p {
-        margin-bottom: 0;
+    .left_half p {
+        margin-bottom: 4.3rem;
     }
 
     #contact .titular
@@ -232,5 +239,8 @@ form button img {
         text-align: left;
     }
 
+    textarea {
+        height: 9rem;
+    }
     
 }
