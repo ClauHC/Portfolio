@@ -1,9 +1,10 @@
 footer {
     background-color: var(--dark-primary);
     width: 100%;
-    height: 7.6rem; /* 121px */
+    height: auto; 
     color: var(--optional-white);
     text-align: center;
+    padding-bottom: 0.5rem;
 }
 
 footer a {
@@ -33,8 +34,7 @@ footer a:last-of-type {
 }
 
 footer p {
-    font-size: 1rem;
-    margin-bottom: 0;  
+    font-size: 1rem; 
     font-weight: 300; 
 }
 

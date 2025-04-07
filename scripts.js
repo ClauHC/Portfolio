@@ -424,7 +424,7 @@ document.querySelector('form').addEventListener('submit', function (e) {
     messageOverlay.style.fontSize = 'var(--font-size-h3)';
     messageOverlay.style.color = 'var(--dark-primary)';
     messageOverlay.style.textAlign = 'center';
-    messageOverlay.style.transition = 'opacity 0.5s ease-in-out';
+    messageOverlay.style.transition = 'opacity 3.0s ease-in-out';
     messageOverlay.textContent = 'Su mensaje ha sido enviado';
 
     // Agregar el contenedor al body
