@@ -4,7 +4,7 @@
         "nombre": "SANTHEMUN",
         "tipologia": "Branding | Ilustrator, Photoshop, 3D Max",
         "descripcion": "Santhemun is a very personal project for me and one that I have carried out with great affection. It is a jewellery brand with a natural yet elegant concept. Market analysis, brand design, messages and slogans, and communication strategies were carried out in this project.",
-        "imagen": "./img/santhemun.png",
+        "imagen": "img/santhemun.png",
         "link": "https://www.behance.net/gallery/142781839/SANTHEMUN"
     },
     {
@@ -12,7 +12,7 @@
         "nombre": "ÁNGEL DE VENUS",
         "tipologia": "Editorial, Photo editing | Indesign, Photoshop",
         "descripcion": "Ángel de Venus is a bimonthly digital publication of the photographic studio Venus Studio designed for a female teenager audience. As a principal designer my job was to create the identity, the editorial guideline, and work in each publication creating and guiding part of the creative work and the design work. This is the third edition.",
-        "imagen": "./img/angel_de_venus-02.jpg",
+        "imagen": "../img/angel_de_venus-02.jpg",
         "link": "https://www.behance.net/gallery/73400309/Angel-de-venus-2"
     },
     {
@@ -20,7 +20,7 @@
         "nombre": "ÁNGEL DE VENUS",
         "tipologia": "Editorial, Photo editing | Indesign, Photoshop",
         "descripcion": "Ángel de Venus is a bimonthly digital publication of the photographic studio Venus Studio designed for a female teenager audience. As a principal designer my job was to create the identity, the editorial guideline, and work in each publication creating and guiding part of the creative work and the design work. This is the second edition.",
-        "imagen": "/img/angel_de_venus-01.jpg",
+        "imagen": "./img/angel_de_venus-01.jpg",
         "link": "https://www.behance.net/gallery/73395505/Angel-de-Venus-1"
     },
     {
@@ -28,7 +28,7 @@
         "nombre": "ÁNGEL DE VENUS",
         "tipologia": "Editorial, Photo editing | Indesign, Photoshop",
         "descripcion": "Ángel de Venus is a bimonthly digital publication of the photographic studio Venus Studio designed for a female teenager audience. As a principal designer my job was to create the identity, the editorial guideline, and work in each publication creating and guiding part of the creative work and the design work. This is the pilot edition.",
-        "imagen": "/img/angel_de_venus-00.jpg",
+        "imagen": "./img/angel_de_venus-00.jpg",
         "link": "https://www.behance.net/gallery/73381987/Angel-de-Venus-0"
     },
     {
