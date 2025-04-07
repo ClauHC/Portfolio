@@ -82,12 +82,10 @@ form :nth-child(5) {
 .form_group input:focus,
 .form_group textarea:focus {
     outline: none;
-    /* background-color: #CF1325; */
 }
 
 textarea {
     resize: none;
-    /* background-color: lightsalmon; */
     height: 7.69rem;
 }
 

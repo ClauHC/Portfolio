@@ -1,38 +1,3 @@
-// -------------------- TOP HOVER MANOS-AMPERSAND ------------------------
-
-
-// const CONTAINER = document.querySelector('.container');
-// const LEFT_ZONE = document.querySelector('.left');
-// const RIGHT_ZONE = document.querySelector('.right');
-
-// LEFT_ZONE.addEventListener('mouseover', () => {
-//     CONTAINER.classList.add('hover_left');
-//     CONTAINER.classList.remove('hover_right');
-// });
-
-// RIGHT_ZONE.addEventListener('mouseover', () => {
-//     CONTAINER.classList.add('hover_right');
-//     CONTAINER.classList.remove('hover_left');
-// });
-
-// CONTAINER.addEventListener('mouseleave', () => {
-//     CONTAINER.classList.remove('hover_left');
-//     CONTAINER.classList.remove('hover_right');
-// });
-
-// //función para ocultar imagen rota y aplicar un degradado
-// function handleAmpersandError(img) {
-//     // Oculta la imagen rota
-//     img.style.display = 'none';
-
-//     // Aplica un degradado al contenedor de la imagen
-//     const parent = img.parentElement;
-//     parent.style.background = 'linear-gradient(90deg, black, transparent)'; // Cambia los colores según tu diseño
-//     parent.style.backgroundSize = 'cover'; // Asegura que el degradado ocupe todo el espacio
-//     parent.style.backgroundPosition = 'center';
-//     parent.style.transition = 'transform 0.3s ease'; // Sincroniza la transición con el hover
-// }
-
 
 /* ------- TOP HOVER MANOS-AMPERSAND Mantiene PC y TABLET, cambia en MOVIL ------- */
 
@@ -52,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             container.style.justifyContent = '';
             container.style.alignItems = '';
             container.style.height = 'auto';
-            container.style.backgroundColor = 'black'; // Fondo negro
+            container.style.backgroundColor = 'black';
 
             // Elimina las clases de hover
             container.classList.remove('hover_left');
@@ -104,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Funciones para manejar el hover
+    // manejar el hover
     function handleHoverLeft() {
         container.classList.add('hover_left');
         container.classList.remove('hover_right');
@@ -375,8 +340,8 @@ document.querySelector('form').addEventListener('submit', function (e) {
     // Validación de los campos del formulario
     const phoneInput = document.getElementById('phone');
     const phoneRegex = /^[0-9]{9}$/; // acepta 9 dígitos sin espacios
-    const nameInput = document.getElementById('name'); // Ejemplo de otro campo
-    const emailInput = document.getElementById('email'); // Ejemplo de otro campo
+    const nameInput = document.getElementById('name'); 
+    const emailInput = document.getElementById('email'); 
     let hasError = false;
 
     // Validar el número de teléfono
@@ -386,14 +351,14 @@ document.querySelector('form').addEventListener('submit', function (e) {
         hasError = true;
     }
 
-    // Validar el nombre (ejemplo: no vacío)
+    // Validar el nombre
     if (nameInput.value.trim() === '') {
         alert('Por favor, introduce tu nombre');
         nameInput.focus();
         hasError = true;
     }
 
-    // Validar el correo electrónico (ejemplo: formato básico)
+    // Validar el correo electrónico
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value)) {
         alert('Por favor, introduce un correo electrónico válido');
@@ -401,12 +366,12 @@ document.querySelector('form').addEventListener('submit', function (e) {
         hasError = true;
     }
 
-    // Si hay errores, no mostrar el mensaje de éxito
+    // Si hay errores, no mostrar el mensaje de mensaje enviado
     if (hasError) {
         return;
     }
 
-    // Crear el contenedor del mensaje
+    // contenedor del mensaje
     const messageOverlay = document.createElement('div');
     messageOverlay.style.position = 'fixed';
     messageOverlay.style.top = '50%';

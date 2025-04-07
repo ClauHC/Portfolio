@@ -12,8 +12,8 @@
   width: 16.00rem;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center horizontally */
+  flex-direction: column; /* pone lso hijso en columna*/
+  align-items: center; /* centra en la horizontal*/
 }
 
 #scrollText button {
@@ -36,33 +36,18 @@
 
 /* --------------------- PC Y TABLET -------------------- */
 @media (min-width: 769px) {
-  .center {
-    width: 30%; /* Ancho del centro en PC y tablet */
-  }
-
-  .center img {
-    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    height: auto; /* Mantiene las proporciones */
-    object-fit: contain; /* Asegura que la imagen no desborde */
-  }
 
   /* ------------------------ TOP HOVER MANOS-AMPERSAND ------------------------- */
 
   /* General ------------------------ */
     
   .container {
-    /*height: 100%;
-    width: 100%;*/
     display: flex;
-    /*justify-content: center;
-    align-items: center;*/
     margin-bottom: 4.38rem;
   }
     
   .container_ampersand {
     display: flex;
-    /*width: 100%;*/
-    /*height: 66.67%; /* 2/3 de pantalla */
     overflow: hidden;
     position: relative;
   }
@@ -119,7 +104,14 @@
     justify-content: center;
     z-index: 1;
     transition: transform 0.5s ease;
-  } 
+  }
+
+  .center img {
+    max-width: 100%; 
+    height: auto; /* Mantiene las proporciones */
+    object-fit: contain; /* Asegura que la imagen no desborde */
+  }
+
 
   /* Right ------------------------ */
 
@@ -195,7 +187,6 @@
 /*------------------- MOVIL Y TABLET ---------------- */
 @media (max-width: 1024px) {
 
-  /*esto de que se parta el texto no me gusta así que es una solución temporal*/
   #inicio p {
     white-space: normal;
   }
@@ -221,65 +212,65 @@
   }
 
   .container_ampersand {
-    padding: 1rem 0; 
+  padding: 1rem 0; 
   }
 
   .zone {
-    margin: 1rem 0; /* Espaciado entre zonas */
-    margin: 0 auto;
+  margin: 1rem 0; /* Espaciado entre zonas */
+  margin: 0 auto;
   }
 
   .zone .content > *:nth-child(n+3) {
-      display: none; /* Oculta todos los hijos a partir del tercero */
+    display: none; /* Oculta todos los hijos a partir del tercero */
   }
 
   .zone p {
-      color: var(--optional-white); /* Los párrafos serán blancos */
-      font-size: clamp(2.5rem, 7vw, 5rem); /* Ajusta el tamaño de fuente al de h1 */
-      margin: 1.5rem 0; /* Espaciado entre párrafos para evitar superposición */
+    color: var(--optional-white);
+    font-size: clamp(2.5rem, 7vw, 5rem); /* Ajusta el tamaño de fuente al de h1 */
+    margin: 1.5rem 0; /* Espaciado entre párrafos para evitar superposición */
   }
 
   .zone.center {
-      width: 45%; /* La imagen ocupa el 45% del ancho */
+    width: 45%; /* La imagen ocupa el 45% del ancho */
   }
 
   .zone.center img {
-      max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
-      height: auto; /* Mantiene las proporciones */
-      object-fit: contain; /* Asegura que la imagen no desborde */
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene las proporciones */
+    object-fit: contain; /* Asegura que la imagen no desborde */
   }
 
   /* Elimina animaciones y hover */
   .zone:hover,
   .hover_left .left,
   .hover_right .right {
-      cursor: default; /* Elimina el puntero de hover */
-      flex: none; /* Elimina el comportamiento de flex */
-      transition: none; /* Elimina las transiciones */
+    cursor: default; /* Elimina el puntero de hover */
+    flex: none; /* Elimina el comportamiento de flex */
+    transition: none; /* Elimina las transiciones */
   }
 
   .hover_left .left,
   .hover_right .right,
   .hover_left .right,
   .hover_right .left {
-      flex: none; /* Desactiva el comportamiento de flex */
-      transition: none; /* Elimina las transiciones */
+    flex: none; /* Desactiva el comportamiento de flex */
+    transition: none; /* Elimina las transiciones */
   }
 
   .hover_left .left_extra,
   .hover_right .right_extra {
-      display: none; /* Oculta los elementos extra */
+    display: none; /* Oculta los elementos extra */
   }
 }
 
 @media (hover: hover) and (pointer: fine) {
   #scrollText button:hover {
-    background-image: url(svg/flecha_abajo_hover.svg);
+  background-image: url(svg/flecha_abajo_hover.svg);
   }
 }
 
 @media (hover: none) and (pointer: coarse) {
   #scrollText button:active {
-    background-image: url(svg/flecha_abajo_hover.svg);
+  background-image: url(svg/flecha_abajo_hover.svg);
   }
 }

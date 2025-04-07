@@ -94,7 +94,6 @@ a {
 
 .titular {
   display: flex;
-  /* background-color: gray; */
 }
 
 .to_left {
@@ -120,15 +119,13 @@ section {
 
 .load_button,
 #scrollText button,
-form button { /* Estado natural */
-  
-  
+form button { 
   color: var(--optional-white);
   font-size: var(--font-size-buttons);
   text-align: center;
   display: inline-block;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Transición suave */
+  transition: background-color 0.3s ease; 
 }
 
 .load_button,
@@ -139,7 +136,7 @@ form button { /* Estado natural */
 
 .load_button,
 form button {
-  background-color: var(--soft-primary); /* Estado natural */
+  background-color: var(--soft-primary); 
 }
 
 .load_button {
