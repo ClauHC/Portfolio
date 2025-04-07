@@ -374,4 +374,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//---------------------- Send Button ------------------------
+document.getElementById('contact_button').addEventListener('click', () => {
+    window.location.href = '#contact';
+});
 

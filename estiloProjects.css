@@ -192,11 +192,10 @@
         transform: translate(-50%, 0); /* Asegura que el texto permanezca centrado */
         bottom: 3.16rem;
     }
-    /* -------------------------------------- img ------------------------------------*/
-
-    
+    /* -------------------------------------- img ------------------------------------*/    
 }
 
+/*------------------- PC -------------------*/
 @media (min-width: 1025px) {
     .image_column {
         grid-column: span 3; /* se expande a 3 columnas */
