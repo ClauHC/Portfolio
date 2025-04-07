@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             container.removeEventListener('mouseleave', handleMouseLeave);
 
             // Cambiar la imagen del centro
-            center.innerHTML = '<img src="/img/manos_ampersand_opcional_white.png" alt="Ampersand móvil">';
+            center.innerHTML = '<img src="img/manos_ampersand_opcional_white.png" alt="Ampersand móvil">';
 
             // Mostrar solo el primer y segundo hijos de .content
             const contents = document.querySelectorAll('.content');
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             container.addEventListener('mouseleave', handleMouseLeave);
 
             // Cambiar la imagen del centro
-            center.innerHTML = '<img src="/img/manos_ampersand.png" alt="Ampersand PC/Tablet">';
+            center.innerHTML = '<img src="img/manos_ampersand.png" alt="Ampersand PC/Tablet">';
 
             // Restaurar visibilidad de todos los hijos de .content
             const contents = document.querySelectorAll('.content');

@@ -21,15 +21,15 @@ footer a:hover {
 }
 
 footer a:first-of-type {
-    background-image: url('/svg/icono_behance.svg');
+    background-image: url('svg/icono_behance.svg');
 }
 
 footer a:nth-of-type(2) {
-    background-image: url('/svg/icono_linkedin.svg');
+    background-image: url('svg/icono_linkedin.svg');
 }
 
 footer a:last-of-type {
-    background-image: url('/svg/icono_github.svg');
+    background-image: url('svg/icono_github.svg');
 }
 
 footer p {

@@ -29,7 +29,7 @@
 }
 
 #postcard_img div{
-    background-image: url('/img/294.jpg');
+    background-image: url('img/294.jpg');
     background-color: var(--soft-primary);
     background-repeat: repeat;
     background-size: contain;
@@ -141,7 +141,7 @@ form button {
     font-weight: 600;  
     
     /* border */
-    border-image: url('/svg/borde_boton.svg');
+    border-image: url('svg/borde_boton.svg');
     border-image-slice: 9;
     border-image-width: 3.5px;
     border-image-outset: 3px;
@@ -153,7 +153,7 @@ form button:hover {
     background-color: var(--dark-primary);
 
     /* border */
-    border-image: url('/svg/borde_boton_hover.svg');
+    border-image: url('svg/borde_boton_hover.svg');
     border-image-slice: 9;
     border-image-width: 3.5px ;
     border-image-outset: 3px;
