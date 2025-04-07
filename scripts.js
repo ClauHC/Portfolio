@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (currentIndex >= data.length) {
-                    NO_MORE_RESULTS.innerHTML += '<h4 class="no_more">No hay más proyectos por ahora :)</h4>';
+                    NO_MORE_RESULTS.innerHTML += '<p class="no_more">No hay más proyectos por ahora :)</p>';
                     LOAD_BUTTON.textContent = 'VER MENOS -';
                     LOAD_BUTTON.removeEventListener('click', loadMoreProjectsMovil);
                     LOAD_BUTTON.addEventListener('click', seeLessProjectsMovil);
@@ -345,18 +345,6 @@ function handlePersonalPhotoError(img) {
     parent.style.minHeight = '300px'; 
 }
 
-// -------------------- Validación del teléfono ------------------------
-document.querySelector('form').addEventListener('submit', function(e) {
-    const phoneInput = document.getElementById('phone');
-    const phoneRegex = /^[0-9]{9}$/; // acepta 9 dígitos sin espacios
-    
-    if (!phoneRegex.test(phoneInput.value)) {
-        e.preventDefault();
-        alert('Por favor, introduce un número de teléfono válido (9 dígitos)');
-        phoneInput.focus();
-    }
-});
-
 //---------------------- Menu hamb ------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const menuHamburger = document.getElementById('menu_hamburger');
@@ -374,8 +362,79 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-//---------------------- Send Button ------------------------
+//---------------------- Contact Button ------------------------
 document.getElementById('contact_button').addEventListener('click', () => {
     window.location.href = '#contact';
 });
 
+//----------- mensaje de enviado y validacion de formulario ------------
+
+document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita el envío del formulario para pruebas
+
+    // Validación de los campos del formulario
+    const phoneInput = document.getElementById('phone');
+    const phoneRegex = /^[0-9]{9}$/; // acepta 9 dígitos sin espacios
+    const nameInput = document.getElementById('name'); // Ejemplo de otro campo
+    const emailInput = document.getElementById('email'); // Ejemplo de otro campo
+    let hasError = false;
+
+    // Validar el número de teléfono
+    if (!phoneRegex.test(phoneInput.value)) {
+        alert('Por favor, introduce un número de teléfono válido (9 dígitos)');
+        phoneInput.focus();
+        hasError = true;
+    }
+
+    // Validar el nombre (ejemplo: no vacío)
+    if (nameInput.value.trim() === '') {
+        alert('Por favor, introduce tu nombre');
+        nameInput.focus();
+        hasError = true;
+    }
+
+    // Validar el correo electrónico (ejemplo: formato básico)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value)) {
+        alert('Por favor, introduce un correo electrónico válido');
+        emailInput.focus();
+        hasError = true;
+    }
+
+    // Si hay errores, no mostrar el mensaje de éxito
+    if (hasError) {
+        return;
+    }
+
+    // Crear el contenedor del mensaje
+    const messageOverlay = document.createElement('div');
+    messageOverlay.style.position = 'fixed';
+    messageOverlay.style.top = '50%';
+    messageOverlay.style.left = '50%';
+    messageOverlay.style.transform = 'translate(-50%, -50%)';
+    messageOverlay.style.width = '50%';
+    messageOverlay.style.height = '50%';
+    messageOverlay.style.backgroundColor = 'var(--light-primary)';
+    messageOverlay.style.opacity = '0.95';
+    messageOverlay.style.borderRadius = '1rem';
+    messageOverlay.style.display = 'flex';
+    messageOverlay.style.justifyContent = 'center';
+    messageOverlay.style.alignItems = 'center';
+    messageOverlay.style.fontFamily = 'var(--font-primary)';
+    messageOverlay.style.fontSize = 'var(--font-size-h3)';
+    messageOverlay.style.color = 'var(--dark-primary)';
+    messageOverlay.style.textAlign = 'center';
+    messageOverlay.style.transition = 'opacity 0.5s ease-in-out';
+    messageOverlay.textContent = 'Su mensaje ha sido enviado';
+
+    // Agregar el contenedor al body
+    document.body.appendChild(messageOverlay);
+
+    // Eliminar el contenedor al finalizar la transición
+    setTimeout(() => {
+        messageOverlay.style.opacity = '0'; // Transición de salida
+        setTimeout(() => {
+            messageOverlay.remove(); // Elimina el elemento del DOM
+        }, 500); // Espera a que termine la transición
+    }, 500); // Duración del mensaje en pantalla
+});

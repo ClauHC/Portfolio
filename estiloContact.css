@@ -189,8 +189,12 @@ form button img {
     #postcard_img,
     #postcard_img div,
     #postcard_white{
-        width: 67vw; 
+        width: 85vw; 
         min-height: 110vw;
+    }
+
+    #postcard_img div{
+        margin-left: 0;
     }
 
     #postcard_white {

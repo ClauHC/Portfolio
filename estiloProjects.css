@@ -127,7 +127,7 @@
     }
 }
 
-/* Responsive: Ajustes para pantallas pequeñas (móviles) */
+/* ---------- MOVIL ----------- */
 @media (max-width: 768px) {
     .grid_container {
         grid-template-columns: 1fr; /* Una sola columna */
@@ -152,6 +152,15 @@
 
     .position_column_2 {
         grid-column: 1; /* pasa a ocupar toda la columna */
+    }
+
+    #graphicProjects .titular {
+        display: block;
+    }
+
+    h2 {
+        margin: -5% 0 0 0;
+        text-align: left;
     }
 }
 
