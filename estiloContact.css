@@ -132,12 +132,8 @@ form :last-child {
 
 form button {
     padding: 10px;
-    align-items: center; /* Alinea verticalmente el texto e imagen */
-    cursor: pointer;
-    background-color: var(--soft-primary);
-
-    /* text */;
-    color: white;
+    align-items: center; /* alinear en la horizontal texto e imagen */
+    transition: border-image, 0.3s ease;
     font-weight: 600;  
     
     /* border */
@@ -146,19 +142,9 @@ form button {
     border-image-width: 3.5px;
     border-image-outset: 3px;
     border-image-repeat: round;
-
 }
 
-form button:hover {
-    background-color: var(--dark-primary);
 
-    /* border */
-    border-image: url('svg/borde_boton_hover.svg');
-    border-image-slice: 9;
-    border-image-width: 3.5px ;
-    border-image-outset: 3px;
-    border-image-repeat: round;
-}
 
 form button img {
     width: 30px;
@@ -248,3 +234,29 @@ form button img {
     }
     
 }
+
+@media (hover: hover) and (pointer: fine) {
+    form button:hover {
+        background-color: var(--dark-primary);    
+
+        /* border */
+        border-image: url('svg/borde_boton_hover.svg');
+        border-image-slice: 9;
+        border-image-width: 3.5px ;
+        border-image-outset: 3px;
+        border-image-repeat: round;
+    }
+  }
+  
+  @media (hover: none) and (pointer: coarse) {
+    form button:active {
+        background-color: var(--dark-primary);    
+
+        /* border */
+        border-image: url('svg/borde_boton_hover.svg');
+        border-image-slice: 9;
+        border-image-width: 3.5px ;
+        border-image-outset: 3px;
+        border-image-repeat: round;
+    }
+  }

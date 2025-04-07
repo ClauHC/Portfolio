@@ -118,17 +118,33 @@ section {
   height: 100%;
 }
 
-.load_button {
-  background-color: var(--soft-primary);
-  border: none;
-  border-radius: 2rem;
+.load_button,
+#scrollText button,
+form button { /* Estado natural */
+  
+  
   color: var(--optional-white);
   font-size: var(--font-size-buttons);
   text-align: center;
-  margin: 1.25rem;
-  padding: 0.94rem 2.00rem;
   display: inline-block;
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.load_button,
+#scrollText button {
+  border: none;
+  border-radius: 2rem;
+}
+
+.load_button,
+form button {
+  background-color: var(--soft-primary); /* Estado natural */
+}
+
+.load_button {
+  margin: 1.25rem;
+  padding: 0.94rem 2.00rem;
 }
 
 .load_button:hover {
@@ -138,3 +154,16 @@ section {
 
 /* ------------------------------------  ----------------------------------- */
 
+@media (hover: hover) and (pointer: fine) {
+  .load_button:hover,
+  form button:hover {
+    background-color: var(--dark-primary);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .load_button:active,
+  form button:active {
+    background-color: var(--dark-primary); 
+  }
+}
